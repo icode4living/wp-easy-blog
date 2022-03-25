@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+//variables
+$theme-font:'Poppins', sans-serif;
+$theme-color: #CB0101;
+
+//mixins
+@mixin dark-theme {
+    color: #eee;
+    background-color: #121212;
+}
+
+@mixin light-theme{
+    color:#222;
+    background-color: #fff;
+}
+@mixin theme-margin{
+    margin-left:30px;
+    margin-right:30px;
+}
+/**styles for users who prefer dark mode at the OS level*/
+@media (prefers-color-scheme: dark) {
+    body{
+        @include dark-theme();
+    }
+    
+}
+/**Overide theme mode if the user prefers to swap*/
+//change from dark mode to light mode
+body.light-theme{
+    @include light-theme();
+}
+//change from light mode to dark mode
+
+body.dark-theme{
+    @include light-theme(); 
+}
+//body default style rules
+body{
+    font-family: $theme-font;
+}
+.slide-item{
+    height: 300px;
+    width: 600px;
+   background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), var(--background);
+  // background-image: url('../asset/eddited/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  //  background-position: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  overflow: hidden;
+box-sizing: content-box;
+    a{
+        flex-wrap: wrap;
+
+        position: relative;
+        top: 60%;
+        color: white;
+text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    a:hover .prev, .next {
+        display: block;
+    }
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.1) ;
+    //font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    display: none;
+  }
+
+  .next {
+    right: 55%;
+    border-radius: 3px 0 0 3px;
+  }
