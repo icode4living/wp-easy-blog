@@ -26,7 +26,20 @@ $theme-color: #CB0101;
     body{
         @include dark-theme();
     }
-    
+    .nav-menu{
+
+        height: 80px;
+        width: 100%;
+        background-color: #1f1e1e !important;
+        
+    }
+    .link-item:hover{
+    background-color: transparent !important;
+
+a{
+    color: #eee !important;
+}
+    }
 }
 /**Overide theme mode if the user prefers to swap*/
 //change from dark mode to light mode
@@ -37,6 +50,7 @@ body.light-theme{
 
 body.dark-theme{
     @include light-theme(); 
+    
 }
 //body default style rules
 body{
@@ -168,11 +182,11 @@ top:16px;
   }
   
   input:checked + .slider {
-    background-color: #00d123;
+    background-color: #e9ebea;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #00d123;
+    box-shadow: 0 0 1px #e0e4e0;
   }
   
   input:checked + .slider:before {
