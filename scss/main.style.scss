@@ -4,6 +4,9 @@ $theme-font:'Poppins', sans-serif;
 $theme-color: #CB0101;
 
 //mixins
+@mixin box-shadow{
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
 @mixin dark-theme {
     color: #eee;
     background-color: #121212;
@@ -26,11 +29,17 @@ $theme-color: #CB0101;
     body{
         @include dark-theme();
     }
+    a{
+        color: #eee !important;
+    }
+    .news-card, .nav-menu, .xl-card{
+        background-color: #1f1e1e !important;
+
+    }
     .nav-menu{
 
         height: 80px;
         width: 100%;
-        background-color: #1f1e1e !important;
         
     }
     .link-item:hover{
@@ -308,7 +317,104 @@ box-sizing: content-box;
   .news-list{
       margin-top: 10px;
 }
+.--2-column{
+display: flex;
+}
 
-.card-container{
+.xl-card{
+    @include box-shadow();
+    height: 600px;
+    flex-wrap: wrap;
+    img{
+        width: 100%;
+    }
+}
+.card-column{
+width: 650px;
+}
+.content-box{
+    flex-wrap: wrap;
+    padding: 10px;
+    span{
+        padding: 8px;
+        background-color: $theme-color;
+        color: white;
+    }
+}
+.content-grid{
+    @include grid-container();
+    gap: 10px !important;
+  width: 600px;
+  margin-left: 10px;
+}
+.news-card{
+    @include box-shadow();
+    max-height: 300px;
     
+    img{
+        width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: #121212;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+.--article{
+    padding: 5px;
+    max-height: auto;
+    flex-wrap: wrap;
+}
+.left-menu{
+    margin-left: 10px;
+    font-weight: bold;
+
+}
+.right-menu{
+   left:75%;
+    position: relative;
+    overflow-x: hidden;
+    font-weight: bold;
+}
+
+.fa-arrow-right{
+    color: $theme-color;
+}
+
+footer{
+    background-color: #1f1e1e;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.social-media{
+    text-align: center;
+
+    a{
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+        padding: 10px 12px;
+        display: inline-block;
+    }
+}
+.footer-link{
+    text-align: center;
+
+    a{
+    padding: 10px 12px;
+    text-decoration: none;
+    }
+    a:hover{
+        color: rgb(68, 68, 68);
+        text-decoration: underline;
+    }
+}
+#copyright{
+    text-align: center;
+}
+.cat-title{
+        font-size: 2.5em;
+        margin: 5px;
 }

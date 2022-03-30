@@ -1,0 +1,23 @@
+@media (max-width: 740px) {
+  .top-banner {
+    display: none;
+  }
+}
+.nav-menu nav {
+  display: none;
+}
+
+.news-slide {
+  width: 100%;
+}
+
+main {
+  margin: 0 !important;
+}
+
+.slide-item {
+  width: 100%;
+  height: 200px;
+}
+
+/*# sourceMappingURL=mobile.style.css.map */
