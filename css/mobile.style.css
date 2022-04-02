@@ -1,3 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/**styles for users who prefer dark mode at the OS level*/
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background-color: #121212;
+  }
 
+  a {
+    color: #eee !important;
+  }
+
+  .news-card, .nav-menu, .xl-card {
+    background-color: #1f1e1e !important;
+  }
+
+  .nav-menu {
+    height: 80px;
+    width: 100%;
+  }
+
+  .link-item:hover {
+    background-color: transparent !important;
+  }
+  .link-item:hover a {
+    color: #eee !important;
+  }
+}
+/**Overide theme mode if the user prefers to swap*/
+body.light-theme {
+  color: #222;
+  background-color: #fff;
+}
+
+body.dark-theme {
+  color: #222;
+  background-color: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.top-banner {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav-menu {
+  height: 80px;
+  width: 100%;
+  background-color: #CB0101;
+}
+.nav-menu nav {
+  padding: 8px;
+  display: inline-block;
+}
+
+.nav-link {
+  margin-left: 100px;
+}
+
+.link-item {
+  display: inline-block;
+  padding: 14px 16px;
+}
+.link-item a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.link-item:hover {
+  background-color: #ffffff;
+}
+.link-item:hover a {
+  color: #CB0101;
+}
+
+.menu-control {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+}
+.menu-control label, .menu-control button {
+  padding: 14px 16px;
+  color: white;
+  font-size: 25px;
+}
+.menu-control button {
+  background-color: transparent;
+  border: none;
+}
+.menu-control button:focus {
+  outline: none;
+  border: none;
+}
+
+.top-panel {
+  display: flex;
+}
+
+.news-slide {
+  width: 500px;
+}
+
+.fa-moon {
+  /*color: #ffffff;
+  font-size: 25px;*/
+  font-size: 18px;
+  color: #121212;
+  position: absolute;
+  bottom: 5px;
+  left: 3px;
+}
+
+.fa-brightness {
+  font-size: 18px;
+  color: #121212;
+  /*position: r;
+  bottom: 5px;
+  right:3px;*/
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  top: 16px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #e9ebea;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #e0e4e0;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 40%;
+}
+
+main {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.slide-item {
+  height: 300px;
+  width: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+.slide-item a {
+  flex-wrap: wrap;
+  box-sizing: content-box;
+  flex-wrap: wrap;
+  position: relative;
+  top: 70%;
+  color: white;
+  text-decoration: none;
+}
+.slide-item a:hover {
+  text-decoration: underline;
+}
+
+.slide-item:hover .prev {
+  display: block;
+}
+
+.slide-item:hover .next {
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: none;
+}
+
+.next {
+  right: 52%;
+  border-radius: 3px 0 0 3px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.grid-container article {
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+.grid-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.breaking-news {
+  margin-left: 130px;
+  width: 600px;
+}
+
+.grid-text {
+  top: 60%;
+  position: relative;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+}
+
+.grid-article:hover a {
+  text-decoration: underline;
+}
+
+.news-list {
+  margin-top: 10px;
+}
+
+.--2-column {
+  display: flex;
+}
+
+.xl-card {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  height: 600px;
+  flex-wrap: wrap;
+}
+.xl-card img {
+  width: 100%;
+}
+
+.card-column {
+  width: 650px;
+}
+
+.content-box {
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.content-box span {
+  padding: 8px;
+  background-color: #CB0101;
+  color: white;
+}
+
+.content-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px !important;
+  width: 600px;
+  margin-left: 10px;
+}
+
+.news-card {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  height: 300px;
+}
+.news-card img {
+  width: 100%;
+}
+.news-card a {
+  text-decoration: none;
+  color: #121212;
+}
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+.--article {
+  padding: 5px;
+  max-height: auto;
+  flex-wrap: wrap;
+}
+
+.left-menu {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.right-menu {
+  left: 75%;
+  position: relative;
+  overflow-x: hidden;
+  font-weight: bold;
+}
+
+.fa-arrow-right {
+  color: #CB0101;
+}
+
+footer {
+  background-color: #1f1e1e;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.social-media {
+  text-align: center;
+}
+.social-media a {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  padding: 10px 12px;
+  display: inline-block;
+}
+
+.footer-link {
+  text-align: center;
+}
+.footer-link a {
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #eee;
+}
+.footer-link a:hover {
+  color: #444444;
+  text-decoration: underline;
+}
+
+#copyright {
+  text-align: center;
+  color: #eee;
+}
+
+.cat-title {
+  font-size: 2.5em;
+  margin: 5px;
+}
+
+/*mobile screen**/
+@media (max-width: 740px) {
+  header {
+    width: 100%;
+    height: 60px;
+  }
+
+  .top-banner {
+    display: none;
+  }
+
+  .menu-control {
+    display: none;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .link-item {
+    display: none;
+  }
+
+  .news-slide {
+    width: 100%;
+    margin: 0;
+  }
+
+  .top-panel {
+    flex-direction: column;
+  }
+
+  .slide-item {
+    max-height: 250px;
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+    border-radius: 0;
+  }
+  .slide-item a {
+    top: 55%;
+  }
+
+  .prev, .next {
+    top: 25%;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .breaking-news {
+    /*margin: 5px;
+    width: 100%;
+    margin-top: 10px;
+    margin-left:0;*/
+    display: none;
+  }
+
+  .grid-container {
+    display: none;
+  }
+
+  .--2-column {
+    flex-direction: column;
+  }
+
+  .card-column {
+    width: 100%;
+  }
+
+  .xl-card {
+    height: auto;
+  }
+
+  .content-grid {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .left-menu {
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .right-menu {
+    left: 50%;
+    position: relative;
+    overflow-x: hidden;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  /*.news-card{
+      height: auto;
+      flex-wrap: wrap !important;
+      box-sizing: content-box;
+  }*/
+  .--article {
+    flex-wrap: wrap;
+    padding: 2px;
+  }
+
+  .cat-title {
+    font-size: medium;
+  }
+
+  .news-category {
+    margin-top: 5px;
+  }
+
+  .grid-text, .grid-article {
+    padding: 0;
+  }
+  .grid-text h1, .grid-article h1 {
+    margin: 0;
+  }
+
+  .news-card {
+    margin-bottom: 5px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    margin-left: 0 !important;
+  }
+  .news-card article {
+    flex-wrap: wrap;
+  }
+  .news-card img {
+    height: inherit;
+    width: 120px;
+  }
+
+  .content-grid {
+    display: block;
+  }
+}
 
 /*# sourceMappingURL=mobile.style.css.map */
