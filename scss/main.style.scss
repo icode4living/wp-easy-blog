@@ -108,10 +108,6 @@ body{
 }
 .link-item{
     display: inline-block;
-<<<<<<< HEAD
-//font-weight: bold;
-=======
->>>>>>> 00316de8ec5de684543f079b0db009511ebdf733
 padding: 14px 16px;
 a{
     text-decoration:none;
@@ -480,30 +476,19 @@ width: 650px;
 }
 /*mobile screen**/
 @media (max-width:740px) {
-<<<<<<< HEAD
-    header{
-        width:100%;
-        height: 60px;
-=======
     .nav-menu{
         height: 60px;
         width: 100%;
     }
     .menu-control{
         display: none;
->>>>>>> 00316de8ec5de684543f079b0db009511ebdf733
     }
     .top-banner{
         display: none;
     }
-<<<<<<< HEAD
-    .menu-control{
-        display: none;
-=======
     .mobile{
         display: block;
         padding: 14px 16px;
->>>>>>> 00316de8ec5de684543f079b0db009511ebdf733
     }
    main{
        margin: 0 ;
@@ -519,212 +504,6 @@ width: 650px;
  padding: 14px 16px;
  a{
     display: block;
-
-
-     text-decoration:none;
-     color: #eee;
-     cursor: pointer;
-    // font-size: 20px;
  }
- 
- }
- /*.link-item:hover{
-     background-color: #ffffff;
-     a{
-     color: $theme-color;
-     }
- }*/
-  
-   .menu-panel{
-       display: none;
-   }
-   //menu close-button
-   .close-btn{
-       background-color: transparent;
-       color: $theme-color;
-       position: absolute;
-       right: 5px;
-       font-size: 30px;
-       border: none;
-   }
-   //mobile navigation sidebar
- .m-nav-link{
-     //display: block;
-     position: fixed;
-     left: 0;
-     height: 100%;
-     width: 70%;
-     top:0;
-     overflow-x: hidden;
-     //background-color: ;
-     @include dark-theme();
-     z-index: 1;
-     transition: 0.5s;
- }
- //cover backgroud when menu is active
- .active-menu{
-     display: none;
-     position: fixed;
-     top:0;
-     height: 100%;
-     width: 100%;
-     z-index: 1;
-     background-color: rgb(0, 0,0, 0.4);
- }
-  .news-slide{
-      width: 100%;
-      margin: 0;
-  }
-  .top-panel{
-      flex-direction: column;
-  }
-  .slide-item{
-    max-height: 250px ;
-    width: 100% ;
-    padding: 5px;
-    flex-wrap: wrap;
-    border-radius: 0;
-    a{
-        top:55%;
-    }
-  }
-  .prev , .next{
-      top:18%;
-  }
-  .next{
-      right: 10px;
-  }
-  .breaking-news{
-      /*margin: 5px;
-      width: 100%;
-      margin-top: 10px;
-      margin-left:0;*/
-      display: none;
-  }
-  .grid-container{
-     // gap:5px;
-     display: none;
-  }
-  
-  .--2-column{
-      flex-direction: column;
-  }
-  .card-column{
-    width: 100%;
-    }
-    .xl-card{
-        height: auto;
-    }
-  .content-grid{
-      width: 100%;
-      margin-top: 10px;
-  }
-  .left-menu{
-    margin-left: 10px;
-    font-weight: bold;
-    padding: 10px;
-
 }
-.right-menu{
-   left:50%;
-    position: relative;
-    overflow-x: hidden;
-    font-weight: bold;
-    padding: 10px;
-
-}
-/*.news-card{
-    height: auto;
-    flex-wrap: wrap !important;
-    box-sizing: content-box;
-}*/
-.--article{
-    flex-wrap: wrap ;
-    //box-sizing: content-box;
-    padding: 2px;
-font-size: small;
-}
-.cat-title{
-font-size: larger;}
-.news-category{
-    margin-top: 5px;
-}
-.grid-text, .grid-article{
-    padding: 0;
-    h1{
-        margin: 0;
-    }
-}
-//news card for mobile
-.news-card{
-    margin-bottom: 5px;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
-    margin-left: 0 !important;
-span{
-   // position: absolute;
-}
-    article{
-       // padding: 2px;
-       // width: 50%;
-       flex-wrap: wrap;
-
-    }
-    img{
-       // margin-left: 2px;
-        height: inherit;
-        width: 120px;
-    }
-}
-.content-grid{
-    display: block;
-}
-.theme-footer{
-    display: none;
-}
-.bottom-menu{
-   display: inline-block !important;
-    @include dark-theme();
-    position: fixed;
-    bottom: 0;
-width: 100%;
-height: 60px;
-    overflow: hidden;
-  text-align: center;
-   // align-items: center;
-    
-}
-.menu-list{
-    list-style: none;
-    padding-right: 20px;
- //   padding:0px 20px 0px 10px;
-  //  margin-bottom: 20px;
-    display: inline-block;
-    color: #ffffff;
-    button{
-        background-color: transparent;
-        border: none;
-        color:#ffffff;
-        font-size: 15px;
-    }
-    a{
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 15px;
-    }
-}
-small{
-    padding: 2px;
-}
-small:hover{
-    text-decoration: underline;
-}
-.option-control{
-    display: none;
-}
-}
-.bottom-menu{
-  display: none;
 }

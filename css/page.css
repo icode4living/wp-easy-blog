@@ -1,8 +1,10 @@
 .content-container {
   display: flex;
   flex: 1 1 auto;
+  background-color: #eee;
   margin-right: 100px;
   margin-left: 100px;
+  padding: 20px;
 }
 
 .--content-title {
@@ -44,6 +46,7 @@
 }
 
 .newsletter {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
   background-color: #CB0101;
   color: white;
   padding: 10px;
@@ -117,61 +120,89 @@
 .whatsapp {
   background-color: #05ca15;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
 }
 .whatsapp i {
   color: #ffffff;
-  font-size: 20px;
 }
 
 .facebook {
   background-color: #0044c2;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
 }
 .facebook i {
   color: #ffffff;
-  font-size: 20px;
 }
 
 .twitter {
   background-color: #028edf;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
 }
 .twitter i {
   color: #ffffff;
-  font-size: 20px;
 }
 
 .ig {
   background-color: #f30a3c;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
 }
 .ig i {
   color: #ffffff;
-  font-size: 20px;
 }
 
 .linkedin {
   background-color: #063a9c;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
 }
 .linkedin i {
   color: #ffffff;
-  font-size: 20px;
 }
 
 .link {
   background-color: #171817;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
 }
 .link i {
   color: #ffffff;
-  font-size: 20px;
+}
+
+.comment-area {
+  border-top: 2px solid #eee;
+}
+
+.comment-tab th {
+  padding: 10px 12px;
+}
+
+.active-comment-tab {
+  border-bottom: 2px solid #eee;
+  transition: border 1s;
+}
+
+#comment-form, #comment-list {
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .newsletter, .column-card {
+    color: #eee;
+    background-color: #1f1d1d;
+  }
+
+  .whatsapp, .twitter, .linkedin, .ig, .facebook {
+    background-color: #171817;
+    color: #ffffff;
+  }
+
+  .content-container {
+    color: #eee;
+    background-color: #1f1d1d;
+  }
 }
 
 /*# sourceMappingURL=page.css.map */
