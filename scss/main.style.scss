@@ -24,6 +24,9 @@ $theme-color: #CB0101;
     margin-left:50px;
     margin-right:50px;
 }
+body{
+    overflow-x: hidden;
+}
 /**styles for users who prefer dark mode at the OS level*/
 @media (prefers-color-scheme: dark) {
     body{
@@ -49,6 +52,10 @@ a{
     color: #eee !important;
 }
     }
+
+    .m-nav-link{
+        @include dark-theme();
+    }
 }
 /**Overide theme mode if the user prefers to swap*/
 //change from dark mode to light mode
@@ -73,6 +80,19 @@ body{
     overflow: hidden;
 
 }
+.mobile-menu{
+    background-color: transparent;
+    color: white;
+    padding: 8px;
+    border: none;
+}
+.fa-bars{
+    color: white;
+    font-size: 30px;
+}
+.mobile{
+    display: none;
+}
 .nav-menu{
 
     height: 80px;
@@ -88,7 +108,10 @@ body{
 }
 .link-item{
     display: inline-block;
+<<<<<<< HEAD
 //font-weight: bold;
+=======
+>>>>>>> 00316de8ec5de684543f079b0db009511ebdf733
 padding: 14px 16px;
 a{
     text-decoration:none;
@@ -98,6 +121,14 @@ a{
 }
 
 }
+.option-control{
+    background-color: transparent;
+    color: #eee;
+    border: none;
+    padding: 10px;
+    font-size: 30px;
+}
+
 .link-item:hover{
     background-color: #ffffff;
     a{
@@ -111,7 +142,7 @@ a{
     label,button{
         padding: 14px 16px;
         color: white;
-        font-size: 25px;
+       // font-size: 25px;
 
 
     }
@@ -217,9 +248,10 @@ margin-top: 10px;
 @include theme-margin();
 }
 .slide-item{
+    display: none;
     height: 300px;
     width: 600px;
-   background:linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), var(--background);
+   background:linear-gradient( rgba(255,255,255,0.05), rgba(0,0,0, 0.8) ), var(--background);
   // background-image: url('../asset/eddited/about.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -244,16 +276,16 @@ text-decoration: none;
     }
     
 }
-.slide-item:hover .prev{
+.news-slide:hover .prev{
 display: block;
 }
-.slide-item:hover .next{
+.news-slide:hover .next{
     display: block;
 }
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 60%;
+    top: 67%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -264,7 +296,7 @@ display: block;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    display: none;
+    display:none;
 
   }
 
@@ -272,13 +304,31 @@ display: block;
     right: 52%;
     border-radius: 3px 0 0 3px;
   }
-
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+.dot-container{
+position: relative;
+bottom: 30px;
+}
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
   .grid-container{
      @include grid-container();
       article{
     height: 300px;
     width: 100%;
-   background:linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), var(--background);
+   background:linear-gradient( rgba(255,255,255,0.05), rgba(0,0,0, 0.8) ), var(--background);
   // background-image: url('../asset/eddited/about.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -383,10 +433,13 @@ width: 650px;
     color: $theme-color;
 }
 
-footer{
+.theme-footer{
     background-color: #1f1e1e;
     margin-top: 20px;
-    overflow: hidden;
+   overflow: hidden;
+   //bottom: 0;
+  // position: absolute;
+   width: 100%;
 }
 .social-media{
     text-align: center;
@@ -422,25 +475,102 @@ footer{
         margin: 5px;
 
 }
-
+.close-btn{
+    display: none;
+}
 /*mobile screen**/
 @media (max-width:740px) {
+<<<<<<< HEAD
     header{
         width:100%;
         height: 60px;
+=======
+    .nav-menu{
+        height: 60px;
+        width: 100%;
+    }
+    .menu-control{
+        display: none;
+>>>>>>> 00316de8ec5de684543f079b0db009511ebdf733
     }
     .top-banner{
         display: none;
     }
+<<<<<<< HEAD
     .menu-control{
         display: none;
+=======
+    .mobile{
+        display: block;
+        padding: 14px 16px;
+>>>>>>> 00316de8ec5de684543f079b0db009511ebdf733
     }
    main{
        margin: 0 ;
-   }  
-  .link-item{
-      display: none ;
-  }
+   } 
+   .nav-link{
+    margin-left: 0;
+ }
+ .link-item{
+     width: inherit;
+ border-bottom: 1px solid #1f1e1e;
+ overflow: hidden;
+ width: 100%;
+ padding: 14px 16px;
+ a{
+    display: block;
+
+
+     text-decoration:none;
+     color: #eee;
+     cursor: pointer;
+    // font-size: 20px;
+ }
+ 
+ }
+ /*.link-item:hover{
+     background-color: #ffffff;
+     a{
+     color: $theme-color;
+     }
+ }*/
+  
+   .menu-panel{
+       display: none;
+   }
+   //menu close-button
+   .close-btn{
+       background-color: transparent;
+       color: $theme-color;
+       position: absolute;
+       right: 5px;
+       font-size: 30px;
+       border: none;
+   }
+   //mobile navigation sidebar
+ .m-nav-link{
+     //display: block;
+     position: fixed;
+     left: 0;
+     height: 100%;
+     width: 70%;
+     top:0;
+     overflow-x: hidden;
+     //background-color: ;
+     @include dark-theme();
+     z-index: 1;
+     transition: 0.5s;
+ }
+ //cover backgroud when menu is active
+ .active-menu{
+     display: none;
+     position: fixed;
+     top:0;
+     height: 100%;
+     width: 100%;
+     z-index: 1;
+     background-color: rgb(0, 0,0, 0.4);
+ }
   .news-slide{
       width: 100%;
       margin: 0;
@@ -459,7 +589,7 @@ footer{
     }
   }
   .prev , .next{
-      top:25%;
+      top:18%;
   }
   .next{
       right: 10px;
@@ -512,10 +642,10 @@ footer{
     flex-wrap: wrap ;
     //box-sizing: content-box;
     padding: 2px;
-
+font-size: small;
 }
 .cat-title{
-font-size: medium;}
+font-size: larger;}
 .news-category{
     margin-top: 5px;
 }
@@ -551,4 +681,50 @@ span{
 .content-grid{
     display: block;
 }
+.theme-footer{
+    display: none;
+}
+.bottom-menu{
+   display: inline-block !important;
+    @include dark-theme();
+    position: fixed;
+    bottom: 0;
+width: 100%;
+height: 60px;
+    overflow: hidden;
+  text-align: center;
+   // align-items: center;
+    
+}
+.menu-list{
+    list-style: none;
+    padding-right: 20px;
+ //   padding:0px 20px 0px 10px;
+  //  margin-bottom: 20px;
+    display: inline-block;
+    color: #ffffff;
+    button{
+        background-color: transparent;
+        border: none;
+        color:#ffffff;
+        font-size: 15px;
+    }
+    a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 15px;
+    }
+}
+small{
+    padding: 2px;
+}
+small:hover{
+    text-decoration: underline;
+}
+.option-control{
+    display: none;
+}
+}
+.bottom-menu{
+  display: none;
 }

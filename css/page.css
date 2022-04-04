@@ -1,0 +1,177 @@
+.content-container {
+  display: flex;
+  flex: 1 1 auto;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.--content-title {
+  text-align: center;
+}
+.--content-title h1 {
+  margin: 5px;
+}
+
+.post-detail {
+  text-align: center;
+}
+.post-detail li {
+  display: inline-block;
+  list-style: none;
+  padding: 8px 10px;
+}
+.post-detail a {
+  color: #01aa01;
+  text-decoration: none;
+}
+
+.--content {
+  width: 70%;
+  flex-wrap: wrap;
+}
+.--content p::first-letter {
+  font-size: 50px;
+}
+.--content p {
+  line-height: 30px;
+  font-size: 20px;
+  word-spacing: 0.05em;
+}
+
+.side-bar {
+  margin-left: 20px;
+  width: 350px;
+}
+
+.newsletter {
+  background-color: #CB0101;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+.newsletter h1 {
+  text-align: center;
+}
+
+.newsletter-form {
+  display: block;
+}
+
+.form-group {
+  align-items: center;
+  padding: 10px;
+}
+.form-group button {
+  background-color: #0d4bf3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+}
+.form-group input {
+  width: 90%;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.--grid-column {
+  margin-bottom: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.column-card {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  padding: 8px;
+  flex-wrap: wrap;
+}
+.column-card span {
+  margin-top: 5px;
+  padding: 8px;
+  background-color: #CB0101;
+  color: #eee;
+}
+.column-card a {
+  color: #121212;
+  text-decoration: none;
+}
+
+.share-button {
+  text-align: center;
+}
+
+.share-list {
+  list-style: none;
+  display: inline-block;
+  padding: 8px;
+}
+.share-list a {
+  text-decoration: none;
+}
+
+.whatsapp {
+  background-color: #05ca15;
+  border-radius: 50%;
+  padding: 10px;
+}
+.whatsapp i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.facebook {
+  background-color: #0044c2;
+  border-radius: 50%;
+  padding: 10px;
+}
+.facebook i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.twitter {
+  background-color: #028edf;
+  border-radius: 50%;
+  padding: 10px;
+}
+.twitter i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.ig {
+  background-color: #f30a3c;
+  border-radius: 50%;
+  padding: 10px;
+}
+.ig i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.linkedin {
+  background-color: #063a9c;
+  border-radius: 50%;
+  padding: 10px;
+}
+.linkedin i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.link {
+  background-color: #171817;
+  border-radius: 50%;
+  padding: 10px;
+}
+.link i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=page.css.map */
