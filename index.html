@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8" >
 <meta name="description" content="Go to flourishtimes.com.ng for the breaking news and latest top stories on sports, 
 entertainment, business, politics from Nigeria and arround the world">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
 <title>Flourish Times Blog &#8212; The Latest News in Nigeria and arround the World | Top Stories </title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="css/mobile.style.css" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="css/main.style.css" type="text/css">
+<link rel="stylesheet" href="icons/css/all.css">
 </head>
 <body>
 <header>
@@ -18,6 +17,15 @@ entertainment, business, politics from Nigeria and arround the world">
 </section>
 
 <section class="nav-menu">
+<div class="mobile">
+<button class="mobile-menu">
+<i class="fa-solid fa-bars"></i>
+</button>
+</div>
+<div class="active-menu">
+<div class="menu-panel" id="menu-panel">
+<button class="close-btn">&times;</button>
+
 <nav class="logo">
 <!--theme logo goes here-->
 
@@ -33,22 +41,26 @@ entertainment, business, politics from Nigeria and arround the world">
 <a href="#">Link 3</a>
 </div>
 </nav>
-<nav class="menu-control">
+<nav class="menu-control" >
+<button class="option-control">
+<i class="fa-solid fa-bars"></i></button>
+</nav>
+<!--<nav class="menu-control" >
 <label class="switch">
-<!--Dark mode switch-->
 <input type="checkbox">
   <span class="slider round"><i class="fa-solid fa-moon"></i>
 
 
   </span>
 </label>
-<!--<i class="fa-solid fa-moon"></i>-->
 
 <button>
-<!---Search-->
 <i class="fa-solid fa-magnifying-glass"></i>
 </button>
+-->
 </nav>
+</div>
+</div>
 </section>
 </header>
 <main>
@@ -60,8 +72,30 @@ entertainment, business, politics from Nigeria and arround the world">
 <a href="#" class="slide-text">
 <h1>New Emerging Tech Startup in Nigeria</h1>
 </a>
-  <p class="prev" onclick="">&#10094;</p>
-  <p class="next" onclick="">&#10095;</p>
+ 
+</div>
+<div class="slide-item" style="--background: url('../asset/eddited/cctv.jpg')">
+
+<a href="#" class="slide-text">
+<h1>Federal Government to install CCTV in Kaduna</h1>
+</a>
+ 
+</div>
+<div class="slide-item" style="--background: url('../asset/eddited/tech.jpg')">
+
+<a href="#" class="slide-text">
+<h1>New Emerging Tech Startup in Nigeria</h1>
+</a>
+ 
+</div>
+<div>
+ <p class="prev" onclick="plusSlides(-1)">&#10094;</p>
+  <p class="next" onclick="plusSlides(1)">&#10095;</p>
+  </div>
+  <div style="text-align:center" class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 </div>
 
@@ -135,11 +169,11 @@ entertainment, business, politics from Nigeria and arround the world">
 <img src="asset/eddited/seo.jpg" alt="">
 <article class="content-box">
   <span>Featured</span>
-<h1>The importance of SEO to business</h1>
+<h2>The importance of SEO to business</h2>
 </article>
 <div class="card-menu">
   <span class="left-menu">
-15h <i class="fa-regular fa-clock-rotate-left"></i>
+15h <i class="fa-solid fa-clock-rotate-left"></i>
   </span>
   <span class="right-menu">
 Full story <i class="fa-solid fa-arrow-right"></i>
@@ -151,15 +185,15 @@ Full story <i class="fa-solid fa-arrow-right"></i>
 <div class="news-card">
 <img src="asset/eddited/space.jpg" alt="">
 <article class="--article">
-<a href="#"><h1>Space X lunched 
-  free internet surveillance</h1></a>
+<a href="#"><h2>Space X lunched 
+  free internet surveillance</h2></a>
 </article>
 </div>
 <div class="news-card">
   <img src="asset/eddited/space.jpg" alt="">
   <article class="--article">
-  <a href="#"><h1>Space X lunched 
-    free internet surveillance</h1></a>
+  <a href="#"><h2>Space X lunched 
+    free internet surveillance</h2></a>
   </article>
 
   </div>
@@ -167,22 +201,22 @@ Full story <i class="fa-solid fa-arrow-right"></i>
   <div class="news-card">
     <img src="asset/eddited/space.jpg" alt="">
     <article class="--article">
-    <a href="#"><h1>Space X lunched 
-      free internet surveillance</h1></a>
+    <a href="#"><h2>Space X lunched 
+      free internet surveillance</h2></a>
     </article>
     </div>
     <div class="news-card">
       <img src="asset/eddited/space.jpg" alt="">
       <article class="--article">
-      <a href="#"><h1>Space X lunched 
-        free internet surveillance</h1></a>
+      <a href="#"><h2>Space X lunched 
+        free internet surveillance</h2></a>
       </article>
       </div>
 </div>
 </div>
 </section>
 </main>
-<footer>
+<footer class="theme-footer">
   <div class="social-media">
     <a href="#"><i class="fa-brands fa-facebook"></i></a>
     <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -202,5 +236,26 @@ document.write(newDate.getFullYear().toString());
   </script> Flourish Times All right reserved. The contents on flourishtimes.com.ng
   can not be rewritten, published or redistributed without prior written authority to Flourish Times  </small></p>
 </footer>
+<div class="bottom-menu">
+<ul>
+<li class="menu-list"><a href="/"><i class="fa-solid fa-house"></i></a>
+<br>
+<small>Home</small>
+</li>
+
+<li  class="menu-list"><button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+<br>
+<small>Search</small>
+
+</li>
+<li  class="menu-list"><button class="setting-btn"><i class="fa-solid fa-gear"></i></button>
+<br>
+<small>Settings</small>
+</li>
+</ul>
+</div>
+
+<!--menu class-->
+<script src="js/navcontrol.js"></script>
 </body>
 </html>

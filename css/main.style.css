@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  overflow-x: hidden;
+}
+
 /**styles for users who prefer dark mode at the OS level*/
 @media (prefers-color-scheme: dark) {
   body {
@@ -25,6 +29,11 @@
   .link-item:hover a {
     color: #eee !important;
   }
+
+  .m-nav-link {
+    color: #eee;
+    background-color: #121212;
+  }
 }
 /**Overide theme mode if the user prefers to swap*/
 body.light-theme {
@@ -48,6 +57,22 @@ body {
   overflow: hidden;
 }
 
+.mobile-menu {
+  background-color: transparent;
+  color: white;
+  padding: 8px;
+  border: none;
+}
+
+.fa-bars {
+  color: white;
+  font-size: 30px;
+}
+
+.mobile {
+  display: none;
+}
+
 .nav-menu {
   height: 80px;
   width: 100%;
@@ -64,13 +89,20 @@ body {
 
 .link-item {
   display: inline-block;
-  font-weight: bold;
   padding: 14px 16px;
 }
 .link-item a {
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+}
+
+.option-control {
+  background-color: transparent;
+  color: #eee;
+  border: none;
+  padding: 10px;
+  font-size: 30px;
 }
 
 .link-item:hover {
@@ -88,7 +120,6 @@ body {
 .menu-control label, .menu-control button {
   padding: 14px 16px;
   color: white;
-  font-size: 25px;
 }
 .menu-control button {
   background-color: transparent;
@@ -196,9 +227,10 @@ main {
 }
 
 .slide-item {
+  display: none;
   height: 300px;
   width: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), var(--background);
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.8)), var(--background);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
@@ -220,18 +252,18 @@ main {
   text-decoration: underline;
 }
 
-.slide-item:hover .prev {
+.news-slide:hover .prev {
   display: block;
 }
 
-.slide-item:hover .next {
+.news-slide:hover .next {
   display: block;
 }
 
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 60%;
+  top: 67%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -249,6 +281,27 @@ main {
   border-radius: 3px 0 0 3px;
 }
 
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot-container {
+  position: relative;
+  bottom: 30px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
 .grid-container {
   display: grid;
   gap: 30px;
@@ -257,7 +310,7 @@ main {
 .grid-container article {
   height: 300px;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), var(--background);
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.8)), var(--background);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
@@ -364,10 +417,11 @@ main {
   color: #CB0101;
 }
 
-footer {
+.theme-footer {
   background-color: #1f1e1e;
   margin-top: 20px;
   overflow: hidden;
+  width: 100%;
 }
 
 .social-media {
@@ -404,18 +458,92 @@ footer {
   margin: 5px;
 }
 
+.close-btn {
+  display: none;
+}
+
 /*mobile screen**/
 @media (max-width: 740px) {
+  .nav-menu {
+    height: 60px;
+    width: 100%;
+  }
+
+  .menu-control {
+    display: none;
+  }
+
   .top-banner {
     display: none;
+  }
+
+  .mobile {
+    display: block;
+    padding: 14px 16px;
   }
 
   main {
     margin: 0;
   }
 
+  .nav-link {
+    margin-left: 0;
+  }
+
   .link-item {
+    width: inherit;
+    border-bottom: 1px solid #1f1e1e;
+    overflow: hidden;
+    width: 100%;
+    padding: 14px 16px;
+  }
+  .link-item a {
+    display: block;
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  /*.link-item:hover{
+      background-color: #ffffff;
+      a{
+      color: $theme-color;
+      }
+  }*/
+  .menu-panel {
     display: none;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    color: #CB0101;
+    position: absolute;
+    right: 5px;
+    font-size: 30px;
+    border: none;
+  }
+
+  .m-nav-link {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    top: 0;
+    overflow-x: hidden;
+    color: #eee;
+    background-color: #121212;
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  .active-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .news-slide {
@@ -439,7 +567,7 @@ footer {
   }
 
   .prev, .next {
-    top: 25%;
+    top: 18%;
   }
 
   .next {
@@ -497,10 +625,11 @@ footer {
   .--article {
     flex-wrap: wrap;
     padding: 2px;
+    font-size: small;
   }
 
   .cat-title {
-    font-size: medium;
+    font-size: larger;
   }
 
   .news-category {
@@ -533,6 +662,55 @@ footer {
   .content-grid {
     display: block;
   }
+
+  .theme-footer {
+    display: none;
+  }
+
+  .bottom-menu {
+    display: inline-block !important;
+    color: #eee;
+    background-color: #121212;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding-right: 20px;
+    display: inline-block;
+    color: #ffffff;
+  }
+  .menu-list button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 15px;
+  }
+  .menu-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  small {
+    padding: 2px;
+  }
+
+  small:hover {
+    text-decoration: underline;
+  }
+
+  .option-control {
+    display: none;
+  }
+}
+.bottom-menu {
+  display: none;
 }
 
 /*# sourceMappingURL=main.style.css.map */
