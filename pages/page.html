@@ -70,38 +70,135 @@ Proin luctus lacinia mauris vel dictum.
    <div class="comment-area">
 <table class="comment-tab">
 <tr class="comment-title">
-  <th id="comment-form" class="active-comment-tab">Leave a comment <i class="fa-solid fa-message"></i></th>
+  <th id="comment-form" class="active-comment-tab">Leave a comment <i class="fa-solid fa-comment-dots"></i></th>
   <th id="comment-list">Comments <i class="fa-solid fa-comments"></i></th>
 </tr>
-<tr>
-  <td class="comment-form">
+</table>
+  <div class="comment-form">
     <div class="form-container">
-<form>
+<form id="my-comment">
   <div class="form-item">
-    <textarea ></textarea>
+    <textarea aria-label="comment" placeholder="Type your comment"></textarea>
   </div>
   <div class="form-item">
-    <input type="email" aria-label="email" placeholder="Your Email">
+    <input type="text" aria-label="name" 
+    placeholder="Name" value="">
   </div>
   <div class="form-item">
-    <input type="text" aria-label="name" placeholder="Name">
+    <input type="email" aria-label="email"  value=""
+    placeholder="Your Email" id="email">
   </div>
+ 
+  
   <div class="form-item">
     <span>
-      <input type="checkbox"> Store my Name and Email in the browser.
+      <input type="checkbox" id="save-form-data"> Store my Name and Email in the browser.
     </span>
   </div>
+  <div class="form-group">
+    <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+    </div>
 </form>
 <p>We will not publish your email *</p>
 
     </div>
-  </td>
-  <td class="comment-list" style="display: none;">
-    I am comment list
-  </td>
-</tr>
-  </table>
-</table>
+  </div>
+  <div class="comment-list" style="display: none;">
+    <!--Comment container-->
+    <div class="comment-item">
+      <div class="op-detail">
+
+        <img src="../asset/eddited/bg2.jpg" alt="..." class="avatar">
+      <span>
+       <b> Anonymous .</b>
+        <small>14h</small>
+       </span>
+    </div>
+    <span class="reply-block"></span>
+     
+<div class="comment-text">
+ 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget ligula gravida, iaculis nibh at, accumsan tellus. Integer vitae urna sem. Curabitur sollicitudin 
+  aliquam odio, non dictum diam ullamcorper eget. Integer tristique, est sit amet bibendum tempor, turpis turpis ultricies neque, in sodales magna ante vitae leo. Nunc nec ipsum a diam commodo lacinia sed et magna. 
+  Pellentesque aliquam faucibus molestie. Maecenas vulputate, lectus eget dapibus interdum, erat dolor rhoncus leo, et faucibus ante leo nec tortor. Nullam bibendum magna non velit placerat tempus quis at dolor. Nullam non purus nisi.
+   Vestibulum congue neque eget risus ornare vulputate. Aliquam erat volutpat. Vestibulum sagittis sollicitudin eros et rhoncus.
+  Orci varius natoque penatibus</p>
+  <button class="reply-btn" aria-label="reply button">Reply <i class="fa-solid fa-reply"></i></button>
+
+</div>
+  <!--Reply form-->
+<div class="reply" style="display:none;">
+  <button id="close-reply" title="close form"
+  aria-label="close">&times;</button>
+
+<form id="my-reply" >
+  <div class="form-item">
+    <textarea aria-label="comment" placeholder="Type your comment"></textarea>
+  </div>
+  <div class="form-item">
+    <input type="text" aria-label="name" 
+    placeholder="Name" value="">
+  </div>
+  <div class="form-item">
+    <input type="email" aria-label="email"  value=""
+    placeholder="Your Email" id="email">
+  </div>
+ 
+  
+  <div class="form-item">
+    <span>
+      <input type="checkbox" id="save-form-data"> Store my Name and Email in the browser.
+    </span>
+  </div>
+  <div class="form-item">
+    <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+</form>
+</div>
+<div class="reply-item">
+  
+  <div class="op-detail">
+
+    <img src="../asset/eddited/bg2.jpg" alt="..." class="avatar">
+  <span>
+   <b> Anonymous</b>
+    <small>14h</small>
+   </span>
+  </div>
+  <span class="reply-block"></span>
+
+<div class="comment-text">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget ligula gravida, iaculis nibh at, accumsan tellus. Integer vitae urna sem. Curabitur sollicitudin 
+aliquam odio, non dictum diam ullamcorper eget. Integer tristique, est sit amet bibendum tempor, turpis turpis ultricies neque, in sodales magna ante vitae leo. Nunc nec ipsum a diam commodo lacinia sed et magna. 
+Pellentesque aliquam faucibus molestie. Maecenas vulputate, lectus eget dapibus interdum, erat dolor rhoncus leo, et faucibus ante leo nec tortor. Nullam bibendum magna non velit placerat tempus quis at dolor. Nullam non purus nisi.
+Vestibulum congue neque eget risus ornare vulputate. Aliquam erat volutpat. Vestibulum sagittis sollicitudin eros et rhoncus.
+Orci varius natoque penatibus</p>
+</div>
+</div>
+    </div>
+    <div class="comment-item">
+      <div class="op-detail">
+
+        <img src="../asset/eddited/bg2.jpg" alt="..." class="avatar">
+      <span>
+       <b> Anonymous</b>
+        <small>14h</small>
+       </span>
+      </div>
+      
+<div class="comment-text">
+ 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget ligula gravida, iaculis nibh at, accumsan tellus. Integer vitae urna sem. Curabitur sollicitudin 
+  aliquam odio, non dictum diam ullamcorper eget. Integer tristique, est sit amet bibendum tempor, turpis turpis ultricies neque, in sodales magna ante vitae leo. Nunc nec ipsum a diam commodo lacinia sed et magna. 
+  Pellentesque aliquam faucibus molestie. Maecenas vulputate, lectus eget dapibus interdum, erat dolor rhoncus leo, et faucibus ante leo nec tortor. Nullam bibendum magna non velit placerat tempus quis at dolor. Nullam non purus nisi.
+   Vestibulum congue neque eget risus ornare vulputate. Aliquam erat volutpat. Vestibulum sagittis sollicitudin eros et rhoncus.
+  Orci varius natoque penatibus</p>
+</div>
+    </div>
+  </div>
+</div>
+  
    </div>
 </div>
 <div class="side-bar">
@@ -212,5 +309,6 @@ commentFormTab.style.display = 'none';
 
 });
 </script>
+<script src="../js/model.js"></script>
 </body>
 </html>

@@ -51,7 +51,7 @@
   background-color: #CB0101;
   color: white;
   padding: 10px;
-  width: 100%;
+  width: 320px;
 }
 .newsletter h1 {
   text-align: center;
@@ -125,6 +125,7 @@
 }
 .whatsapp i {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .facebook {
@@ -134,6 +135,7 @@
 }
 .facebook i {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .twitter {
@@ -143,6 +145,7 @@
 }
 .twitter i {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .ig {
@@ -152,6 +155,7 @@
 }
 .ig i {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .linkedin {
@@ -161,6 +165,7 @@
 }
 .linkedin i {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .link {
@@ -170,6 +175,7 @@
 }
 .link i {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .comment-area {
@@ -189,8 +195,9 @@
   cursor: pointer;
 }
 
+/**Dark mode**/
 @media (prefers-color-scheme: dark) {
-  .form-container, .newsletter, .column-card {
+  .newsletter, .column-card {
     color: #eee;
     background-color: #1f1d1d;
   }
@@ -203,6 +210,19 @@
   .content-container {
     color: #eee;
     background-color: #1f1d1d;
+  }
+
+  .form-container {
+    background-color: #272626 !important;
+  }
+
+  .reply-btn {
+    color: #eee;
+  }
+
+  .reply-block::before {
+    background-color: #eee !important;
+    opacity: 0.4;
   }
 }
 .form-container {
@@ -226,6 +246,159 @@
 .form-item textarea:focus, .form-item input:focus {
   border: 1px solid #0044c2;
   outline-style: none;
+}
+.form-item button {
+  border-radius: 8px;
+  border: none;
+  background-color: #0044c2;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.comment-list {
+  width: 600px;
+  margin: 0;
+  padding: 0;
+}
+
+.op-detail span {
+  position: absolute;
+  padding-left: 10px;
+}
+.op-detail small {
+  opacity: 0.8;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.comment-text {
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  bottom: 50px;
+}
+
+.comment-item {
+  flex-wrap: wrap;
+}
+
+.reply-btn {
+  background-color: transparent;
+  border: none;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.reply {
+  padding-left: 100px;
+}
+
+.reply-item {
+  left: 50px;
+  position: relative;
+  top: 0;
+}
+
+.reply-block::before {
+  content: "";
+  width: 2px;
+  height: 200px;
+  opacity: 0.3;
+  display: block;
+  background-color: #000000;
+  position: absolute;
+  margin-left: 30px;
+}
+
+#close-reply {
+  color: #CB0101;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.fa-comments, .fa-comment-dots {
+  opacity: 0.4;
+}
+
+/**mobile screen**/
+@media (max-width: 740px) {
+  .content-container {
+    display: block;
+    background-color: #fcfcfc;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 5px;
+  }
+
+  .side-bar {
+    display: none;
+  }
+
+  .comment-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-container {
+    width: auto;
+    background-color: #f7f4f4;
+    padding: 10px;
+  }
+  .form-container p {
+    color: #ff0606;
+  }
+
+  .form-item {
+    margin-bottom: 5px;
+  }
+  .form-item textarea, .form-item input[type=email], .form-item input[type=text] {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+  }
+
+  .--content {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .comment-text {
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    left: 20px;
+    bottom: 0;
+  }
+
+  .reply-block::before {
+    content: "";
+    width: 2px;
+    height: 200px;
+    opacity: 0.3;
+    display: block;
+    background-color: #000000;
+    position: absolute;
+    margin-left: 5px;
+  }
+
+  .reply {
+    padding-left: 0;
+  }
+
+  .reply-item {
+    left: 3px;
+    position: relative;
+    top: 0;
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=page.css.map */

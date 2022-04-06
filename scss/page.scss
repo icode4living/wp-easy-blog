@@ -34,6 +34,8 @@ flex-wrap: wrap;
 .side-bar{
     margin-left: 20px;
    width: 350px;
+   //overflow: hidden;
+
 }
 #f-letter::first-letter{
     
@@ -50,7 +52,9 @@ flex-wrap: wrap;
     background-color: #CB0101;
     color: white;
     padding: 10px;
-    width: 100%;
+    width: 320px;
+    //position: fixed;
+  
     h1{
         text-align: center;
     }
@@ -117,11 +121,12 @@ flex-wrap: wrap;
 .whatsapp{
     background-color: #05ca15;
     border-radius: 50%;
+   
     padding: 8px;
 
     i{
         color: #ffffff;
-       // font-size: 15px;
+       font-size: 20px;
 
     }
 }
@@ -133,7 +138,7 @@ flex-wrap: wrap;
 
     i{
         color: #ffffff;
-       // font-size: 15px;
+       font-size: 20px;
 
     }
 }
@@ -145,7 +150,7 @@ flex-wrap: wrap;
 
     i{
         color: #ffffff;
-        //font-size: 15px;
+        font-size: 20px;
 
     }
 }
@@ -157,7 +162,7 @@ flex-wrap: wrap;
 
     i{
         color: #ffffff;
-        //font-size: 15px;
+        font-size: 20px;
 
     }
 }
@@ -169,7 +174,7 @@ flex-wrap: wrap;
 
     i{
         color: #ffffff;
-        //font-size: 15px;
+        font-size: 20px;
 
     }
 }
@@ -180,7 +185,7 @@ flex-wrap: wrap;
 
     i{
         color: #ffffff;
-        //font-size: 2px;
+        font-size: 20px;
 
     }
 }
@@ -200,8 +205,9 @@ flex-wrap: wrap;
 #comment-form, #comment-list{
 cursor: pointer;
 }
+/**Dark mode**/
 @media (prefers-color-scheme: dark) {
-    .form-container, .newsletter, .column-card{
+    .newsletter, .column-card{
         color: #eee;
     background-color: #1f1d1d;
     }
@@ -214,7 +220,17 @@ cursor: pointer;
         color: #eee;
     background-color: #1f1d1d;
     }
-    
+    .form-container{
+        background-color: #272626 !important;
+
+    }
+    .reply-btn{
+        color: #eee;
+    }
+    .reply-block::before{
+        background-color: #eee !important;
+        opacity:0.4;
+    }  
 }
 .form-container{
     width: 600px;
@@ -236,4 +252,159 @@ cursor: pointer;
 border: 1px solid #0044c2;
 outline-style: none;
     }
+    button{
+        border-radius: 8px;
+        border: none;
+        background-color: #0044c2;
+        color: #ffffff;
+        padding: 10px;
+    }
+}
+.comment-list{
+    width: 600px;
+    margin: 0;
+    padding: 0;
+   // display: flex;
+}
+.op-detail{
+    span{
+        position: absolute;
+        padding-left: 10px;
+    }
+    small{
+        opacity: 0.8;
+    }
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+
+.comment-text{
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    left: 60px;
+    bottom:50px;
+   // padding-left: 50px;
+   //position: relative;
+   
+}
+.comment-item{
+   // height: 300px;
+    flex-wrap: wrap;
+}
+.reply-btn{
+    background-color: transparent;
+    border: none;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.reply{
+    padding-left: 100px;
+}
+.reply-item{
+    left: 50px;
+    position: relative;
+    top:0;
+}
+.reply-block::before{
+content: "";
+width: 2px;
+height: 200px;
+opacity: 0.3;
+display: block;
+background-color: #000000;
+position: absolute;
+//top:2px;
+//overflow: hidden;
+//bottom: 0;
+margin-left: 30px;
+}
+#close-reply{
+    //position: absolute;
+    color:#CB0101;
+    font-size: 20px;
+   background-color: transparent;
+   border: none;
+}
+.fa-comments, .fa-comment-dots{
+    opacity: 0.4;
+}
+/**mobile screen**/
+@media (max-width:740px) {
+    .content-container{
+        display: block;
+       // flex: 1 1 auto;
+    background-color: #fcfcfc;
+        margin-right: 2px;
+        margin-left: 2px;
+        padding: 5px;
+    }
+    .side-bar{
+        display: none;
+    }
+    .comment-list{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+       // display: flex;
+    }
+    .form-container{
+       // width: 100%;
+       width: auto;
+        background-color: #f7f4f4;
+        padding:10px;
+        p{
+            color: #ff0606;
+        }
+    }
+    .form-item{
+        margin-bottom: 5px;
+       textarea, input[type=email],input[type=text]{
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #e2e2e2;
+            border-radius: 5px;
+        }
+    }
+    .--content{
+        width: 100%;
+        flex-wrap: wrap;
+        
+        }
+        .comment-text{
+            flex-wrap: wrap;
+            position: relative;
+            overflow: hidden;
+            left: 20px;
+            bottom:0;
+           // padding-left: 50px;
+           //position: relative;
+           
+        }
+        .reply-block::before{
+            content: "";
+            width: 2px;
+            height: 200px;
+            opacity: 0.3;
+            display: block;
+            background-color: #000000;
+            position: absolute;
+            //top:2px;
+            //overflow: hidden;
+            //bottom: 0;
+            margin-left: 5px;
+            }
+            .reply{
+                padding-left: 0;
+            }
+            .reply-item{
+                left: 3px;
+                position: relative;
+                top:0;
+                flex-wrap: wrap;
+            }
 }
